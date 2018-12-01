@@ -2,18 +2,12 @@ require 'toggleblock'
 require 'colortoggle'
 require 'colors'
 
-colors = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1}
-colorR = 0
-colorG = 0
-colorB = 0
-
 function love.load()
 
 end
 
 function love.update(dt)
-  if dt > 0.035 then return end
-
+  
   if colorToggleR.dragging.active and checkToggleBounds(colorToggleR, toggleBlockR) then
     colorToggleR.x = love.mouse.getX() - colorToggleR.dragging.diffX
   end
