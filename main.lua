@@ -3,11 +3,11 @@ require 'colortoggle'
 require 'colors'
 
 function love.load()
-
+  love.graphics.setBackgroundColor(0.3, 0.3, 0.3)
 end
 
 function love.update(dt)
-  
+
   if colorToggleR.dragging.active and checkToggleBounds(colorToggleR, toggleBlockR) then
     colorToggleR.x = love.mouse.getX() - colorToggleR.dragging.diffX
   end
